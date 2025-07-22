@@ -125,9 +125,14 @@
             .summary p {
                 margin-bottom: 8px;
             }
-            /* Avoid page breaks inside important sections */
+            /* Evita quebras de página dentro de seções importantes */
             .experience-item, .project-item, .skill-item {
                 page-break-inside: avoid;
+            }
+            /* Adiciona quebra de página antes da experiência profissional para garantir que não comece no final da página anterior */
+            .professional-experience-section {
+                page-break-before: always;
+                margin-top: 20px; /* Adiciona um espaço extra no topo da nova página */
             }
         }
     </style>
@@ -148,7 +153,7 @@
 
     <div class="section summary">
         <h2>PROFESSIONAL SUMMARY</h2>
-        <p>Builder obsessed with exploring, tinkering and turning ideas into fast prototypes and the AI era supercharged that curiosity. I convert work friction (latency, rework, lost context) into operational Human&#x202F;+&#x202F;AI systems. At Casa Kahla I created a Jewelry Specialist Agent that transformed my daily workload and sparked my shift into AI. In 2025 I founded Newscale, where I prototype LLM agents that deliver rapid impact: cutting first&#x202F;response SLA to under&#x202F;1&#x202F;min, boosting sales conversions, and powering lead nurturing, conversation summarization, onboarding and more. All are orchestrated in n8n with a vector store (Supabase) for semantic context retrieval. My cycle: idea → prototype in hours → real usage → continuous iteration.</p>
+        <p>Builder obsessed with exploring, tinkering and turning ideas into fast prototypes — and the AI era supercharged that curiosity. I convert work friction (latency, rework, lost context) into operational Human&#x202F;+&#x202F;AI systems. At Casa Kahla I created a Jewelry Specialist Agent that transformed my daily workload and sparked my shift into AI. In 2025 I founded Newscale, where I prototype LLM agents that deliver rapid impact: cutting first&#x202F;response SLA to under&#x202F;1&#x202F;min, boosting sales conversions, and powering lead nurturing, conversation summarization, onboarding and more. All are orchestrated in n8n with a vector store (Supabase) for semantic context retrieval. My cycle: idea → prototype in hours → real usage → continuous iteration.</p>
     </div>
 
     <div class="section">
@@ -185,7 +190,7 @@
         </div>
     </div>
 
-    <div class="section">
+    <div class="section professional-experience-section"> <!-- Adicionada nova classe para o controle de quebra de página -->
         <h2>PROFESSIONAL EXPERIENCE</h2>
         <div class="experience-item">
             <div class="job-title">Founder & Human&#x202F;+&#x202F;AI Automation Builder</div>
