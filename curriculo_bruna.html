@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruna Santanna's Resume</title>
+    <style>
+        /* Basic styles to ensure clarity and readability */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5; /* Slightly reduced for more compactness */
+            color: #333;
+            max-width: 800px;
+            margin: 15px auto; /* Slightly smaller top/bottom margin */
+            padding: 0 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 2em; /* Slightly smaller main title */
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.3em; /* Slightly smaller section titles */
+            margin-bottom: 5px;
+        }
+        h3 { /* Used for subheadings like skill categories */
+            color: #2c3e50;
+            font-size: 1.1em; /* Subheadings for categories */
+            margin-bottom: 5px;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 15px; /* Reduced */
+            font-size: 0.85em; /* Slightly smaller for compactness */
+        }
+        .contact-info span {
+            margin: 0 4px; /* Spacing between contact items */
+        }
+        .section {
+            margin-bottom: 20px; /* Reduced */
+            padding-bottom: 10px; /* Reduced */
+            border-bottom: 1px solid #eee;
+        }
+        .section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .summary p {
+            font-size: 0.95em; /* Slightly smaller for compactness */
+            margin-bottom: 10px; /* Reduced */
+        }
+        .job-title, .project-title { /* Applied to job and project titles */
+            font-weight: bold;
+            font-size: 1.05em; /* Ligeiramente menor que h2 */
+            margin-bottom: 3px; /* Reduced */
+        }
+        .company-name, .education-place {
+            font-style: italic;
+            margin-bottom: 2px; /* Reduced */
+        }
+        .dates, .location {
+            font-size: 0.85em; /* Ligeiramente menor */
+            color: #666;
+            margin-bottom: 2px; /* Reduced */
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 8px; /* Reduced */
+        }
+        ul li {
+            margin-bottom: 3px; /* Reduced */
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 15px; /* Reduced spacing between skills */
+            margin-top: 8px;
+        }
+        .skill-item {
+            flex: 1 1 48%; /* Adjusted to try and maintain 2 columns */
+        }
+        .skill-item ul {
+            margin-top: 3px;
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        .skill-item ul li {
+            margin-bottom: 1px; /* Reduced to minimum */
+        }
+        .lang-list span {
+            display: inline-block;
+            margin-right: 10px; /* Reduced */
+        }
+        .additional-experience-item {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        /* Print-specific optimizations */
+        @media print {
+            body {
+                margin: 0; /* Minimal margins on print */
+                padding: 0;
+            }
+            .section {
+                margin-bottom: 15px; /* More compact on print */
+                padding-bottom: 8px;
+            }
+            ul {
+                margin-bottom: 5px;
+            }
+            ul li {
+                margin-bottom: 2px;
+            }
+            .contact-info {
+                margin-bottom: 10px;
+            }
+            .summary p {
+                margin-bottom: 8px;
+            }
+            /* Avoid page breaks inside important sections */
+            .experience-item, .project-item, .skill-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BRUNA ARAUJO SANTANNA</h1>
+        <div class="contact-info">
+            <span><strong>Human&#x202F;+&#x202F;AI Systems Hacker&#x202F;| AI Agent Performance Builder</strong></span> &#x2022;
+            <span>São&#x202F;Paulo – Remote</span> &#x2022;
+            <span>+55&#x202F;11&#x202F;97190‑1020</span> &#x2022;
+            <span><a href="mailto:brunasantanna.ia@gmail.com">brunasantanna.ia@gmail.com</a></span> &#x2022;
+            <span>LinkedIn: <a href="https://www.linkedin.com/in/brunaasantanna" target="_blank">/in/brunaasantanna</a></span> &#x2022;
+            <span>GitHub: <a href="https://github.com/brusantannaia" target="_blank">/brusantannaia</a></span>
+        </div>
+    </header>
+
+    <div class="section summary">
+        <h2>PROFESSIONAL SUMMARY</h2>
+        <p>Builder obsessed with exploring, tinkering and turning ideas into fast prototypes — and the AI era supercharged that curiosity. I convert work friction (latency, rework, lost context) into operational Human&#x202F;+&#x202F;AI systems. At Casa Kahla I created a Jewelry Specialist Agent that transformed my daily workload and sparked my shift into AI. In 2025 I founded Newscale, where I prototype LLM agents that deliver rapid impact: cutting first&#x202F;response SLA to under&#x202F;1&#x202F;min, boosting sales conversions, and powering lead nurturing, conversation summarization, onboarding and more. All are orchestrated in n8n with a vector store (Supabase) for semantic context retrieval. My cycle: idea → prototype in hours → real usage → continuous iteration.</p>
+    </div>
+
+    <div class="section">
+        <h2>KEY AGENTS & PROJECTS (2025)</h2>
+        <div class="project-item">
+            <div class="project-title">Sales & Support Agent</div>
+            <ul>
+                <li>Built in n8n (Switch, HTTP Request, Set, LangChain Agent) with Supabase vector store → warm, multimodal responses; triggers “Send PDF Catalogs” & “Register Customer Interaction”; +28&#x202F;% WhatsApp conversions</li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-title">1st‑Response Reducer</div>
+            <ul>
+                <li>n8n workflow + Supabase vector store → cut SLA from &gt;&#x202F;2&#x202F;h to &lt;&#x202F;1&#x202F;min</li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-title">Lead Nurturer (SDR)</div>
+            <ul>
+                <li>Personalized WhatsApp/Instagram follow‑ups via n8n + FAISS vector store</li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-title">Conversation Summarizer</div>
+            <ul>
+                <li>Structured JSON output (intent &#x25B8; entities &#x25B8; pending &#x25B8; next action) for audit‑ready handoff</li>
+            </ul>
+        </div>
+        <div class="project-item">
+            <div class="project-title">+4 More Agents</div>
+            <ul>
+                <li>Onboarding Copilot, Feedback Synthesizer, Personal Finance Copilot, Gym Rescheduler</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>PROFESSIONAL EXPERIENCE</h2>
+        <div class="experience-item">
+            <div class="job-title">Founder & Human&#x202F;+&#x202F;AI Automation Builder</div>
+            <div class="company-name">Newscale&#x202F;&#x202F;(Remote)</div>
+            <div class="dates">Jan&#x202F;2025 – Present</div>
+            <ul>
+                <li>Pivoted to full‑time AI consulting after proving ROI of Jewelry Specialist Agent</li>
+                <li>Architected multiple LLM workflows in n8n + Supabase vector store: triage → capture → summarization → automated follow‑up</li>
+                <li>Developed vector store–driven context providers and modular prompt templates; documented in Notion (diagrams &amp; README)</li>
+                <li>Built AI‑assisted landing pages (HTML/Python) with CI/CD (GitHub Actions → Netlify)</li>
+                <li>Implemented logging &amp; sub‑48&#x202F;h validation cycles, boosting data completeness &amp; consistency</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="job-title">Director of Operations & Growth</div>
+            <div class="company-name">Kahla Joias&#x202F;&#x202F;(São&#x202F;Paulo)</div>
+            <div class="dates">2017 – 2024</div>
+            <ul>
+                <li>Led omnichannel operations (Shopify/VTEX e‑commerce, retail, WhatsApp, Instagram, CRM) and launched Jewelry Specialist Agent—cutting latency &amp; rework</li>
+                <li>Scaled revenue to ~R$&#x202F;1&#x202F;M/year; managed a 12‑person team across sales, marketing, logistics &amp; customer success</li>
+                <li>Built SOPs, playbooks &amp; dashboards (funnel, inventory, repurchase) supporting 100–150&#x202F;%&#x202F;YoY growth</li>
+                <li>Instituted weekly pipeline reviews and process automation via Pipefy, Supabase &amp; NocoDB</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>ADDITIONAL EXPERIENCE</h2>
+        <div class="additional-experience-item">Marketing Analyst – SulAmérica Seguros (Saúde Ativa Program), 2016–2017</div>
+        <div class="additional-experience-item">Trade Marketing Analyst – BIC, 2015–2016</div>
+        <div class="additional-experience-item">Marketing Intern – Whirlpool Latin America (KitchenAid), 2014–2015</div>
+    </div>
+
+    <div class="section">
+        <h2>TECHNICAL SKILLS</h2>
+        <div class="skills-list">
+            <div class="skill-item">
+                <h3 class="skill-category">LLM & AI</h3>
+                <ul>
+                    <li>Prompt Engineering</li>
+                    <li>Vector Stores & RAG (Supabase, FAISS/Chroma)</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-category">Automation & Orchestration</h3>
+                <ul>
+                    <li>n8n (Switch, HTTP Request, Set, LangChain Agent)</li>
+                    <li>Webhooks</li>
+                    <li>REST/JSON APIs</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-category">Development & Deployment</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>Python (Flask/Django)</li>
+                    <li>AI‑Assisted Coding (ChatGPT, Gemini)</li>
+                    <li>Git/GitHub</li>
+                    <li>GitHub Actions</li>
+                    <li>Netlify</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-category">No‑code / Low‑code</h3>
+                <ul>
+                    <li>Notion</li>
+                    <li>Pipefy</li>
+                    <li>Supabase</li>
+                    <li>NocoDB</li>
+                    <li>Tiny</li>
+                    <li>Lovable</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-category">Data & NLP</h3>
+                <ul>
+                    <li>Entity Extraction</li>
+                    <li>Feedback Clustering</li>
+                    <li>JSON Schema Validation</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3 class="skill-category">Documentation & Ops</h3>
+                <ul>
+                    <li>Structured READMEs</li>
+                    <li>Flow Diagrams</li>
+                    <li>Dashboards (Google Analytics / Looker Studio)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>EDUCATION</h2>
+        <div class="education-item">
+            <div class="job-title">Postgraduate (in progress) – Digital Project Management & Artificial Intelligence</div>
+            <div class="education-place">Universidade de São Paulo&#x202F;|&#x202F;ESALQ</div>
+            <div class="dates">May&#x202F;2025–</div>
+        </div>
+        <div class="education-item">
+            <div class="job-title">Bachelor’s Degree in Communication (Advertising & Propaganda)</div>
+            <div class="education-place">Escola Superior de Propaganda e Marketing – ESPM</div>
+            <div class="dates">2015</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>LANGUAGES</h2>
+        <div class="lang-list">
+            <span>Portuguese: Native</span> &#x2022;
+            <span>English: Fluent (C1)</span> &#x2022;
+            <span>Spanish: Intermediate (B1)</span>
+        </div>
+    </div>
+
+</body>
+</html>
